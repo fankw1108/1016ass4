@@ -5,36 +5,90 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
 <!--navigation bar-->
   <body>
-    <div class="container">
-      <!--nav bar, logo, search-->
-      <div class="head logo">
-        <img src="logo.png" alt="logo">
-      </div>
-      <div class="head nav">
+    <div class="home">
+      <div class="container">
+        <!--nav bar, logo, search-->
+        <div class="logo">
+          <img src="logo.png" alt="logo">
+        </div>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#wwd">What we do</a></li>
           <li><a href="#adopt">Adopt</a></li>
           <li><a href="#donate">Donate</a></li>
-          <li><a href="#report">Report</a></li>
-          <li style="float:right"><a href="#search">search</a></li>
+          <li><a href="#report">Report</a></li> 
         </ul>
-      </div>
-      <div>
-
-        <!--righe image at home section-->
-        <div class="home left">
-          <img id="left-img" src="home_img/left.jpg" alt="left image">
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
         </div>
-        <div class="home left_text">Will you be our guardian angel?</div>
-
-        <div class="item item-3"></div>
-        <div class="item item-4"></div>
       </div>
-  </div>
+      <div class="caption">
+        Will you be our guardian angel?
+      </div>
+      
+      <div class="report"><button class="report-button">Report Animal <br> Cruelty/Injury</button></div>
+      
+      <div class="media-button">
+        <a href="#" class="media fa fa-facebook"></a>
+        <a href="#" class="media fa fa-twitter"></a>
+        <a href="#" class="media fa fa-instagram"></a>
+      </div>
+
+      <section class="what we do">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="wwd-img/care.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="wwd-img/cruelty.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="wwd-img/veterinary.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="wwd-img/chicken.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="wwd-img/farm.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+          <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+      </section>
+    </div>
   </body>
 </html>
+
+
+

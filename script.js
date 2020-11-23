@@ -1,15 +1,26 @@
-.container {
-  grid-template-columns: [1c] 100px [2c] auto [3c] 90px [4c] auto [5c] 50;
-  grid-template-rows: [1r] 180px [2r] 30px [3r] auto [4r] 90px [5r] auto [6r] 130px;
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-.nav{
-  grid-column: 1c / 5c;
-  grid-row: 1r / 2r;
-  background-color: #aaa;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-.item-2 {
-  
-  background-color: #2ef837;
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
