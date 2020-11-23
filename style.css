@@ -142,11 +142,16 @@ li a {
 /*---------------------------------------*/
 /* section 2: what we do slideshow*/
 
-img {vertical-align: middle;}
+.myslide-img {
+  vertical-align: middle;
+  max-height: 700px;
+  object-fit: cover;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  width: 100%;
+  height: 100%;
   position: relative;
   margin: auto;
 }
@@ -181,10 +186,10 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
+  font-size: 25px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 50%;
   width: 100%;
   text-align: center;
 }
@@ -192,7 +197,7 @@ img {vertical-align: middle;}
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 30px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -232,6 +237,7 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
+/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
