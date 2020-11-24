@@ -1,0 +1,272 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/*Set background*/
+body {
+  background-image: url('d-background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  
+}
+
+.stick {
+  position: sticky;
+  top: 0;
+}
+
+.s1-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20% auto 25%;
+  grid-template-rows: 50px;
+}
+
+
+.logo {
+  grid-area: 1/ 1/ 2/ 2;
+}
+
+.logo img{
+  width: 150px;
+}
+
+.navbar {
+  grid-area: 1/ 2/ 2/ 3;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #516655;
+  text-align: center;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+.search-container {
+  grid-area: 1/ 3/ 2/ 4;
+
+}
+
+.search-container {
+  margin: 0;
+  float: right;
+}
+
+.search-container input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+/*----------------------------------*/
+/*progress bar*/
+
+.s2-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 20% auto 20% auto 20% auto;
+  grid-template-rows: 50px;
+}
+
+.donar-detail-icon{
+  grid-area: 1/ 2/ 2/ 3;
+}
+
+.payment-icon {
+  grid-area: 1/ 4/ 2/ 5;
+}
+
+.finish-icon {
+  grid-area: 1/ 6/ 2/ 7
+}
+
+/*----------------------------------*/
+/*donar detail*/
+
+.s3-container {
+  position: sticky;
+  display: grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-rows: 380px;
+}
+
+/*donate amount*/
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.donate-amount {
+  grid-area: 1/ 2/ 2/ 3;
+}
+
+.dot1 {
+  height: 50px;
+  width: 50px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+
+/*donar info*/
+.info{
+  grid-area: 1/ 3/ 2/ 4;
+  background-color: rgba(235, 226, 185, 0.363);
+  border-radius: 15px;
+}
+
+.sign-in {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sign-in-button a:link, a:visited{
+  background-color: rgb(106, 141, 102);
+  color: rgb(247, 247, 247);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sign-in-button a:hover, a:active{
+  background-color: rgb(67, 104, 63);
+  color: rgb(247, 247, 247);
+}
+
+.fill-in{
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fill-in input[type=text] {
+  width: 39%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.753);
+  background-image: url('searchicon.png');
+  background-position: 3px 3px; 
+  background-repeat: no-repeat;
+  padding: 3px 5px 3px 5px;
+}
+
+.long input[type=text], select {
+  width: 80%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.753);
+  background-image: url('searchicon.png');
+  background-position: 3px 3px; 
+  background-repeat: no-repeat;
+  padding: 3px 5px 3px 5px;
+  margin-top: 10px;
+}
+
+/*next button*/
+
+.s4-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 63px;
+}
+
+.next {
+  grid-area: 1/ 1/ 2/ 2;
+  float: right;
+}
+
+.next-button a:link, a:visited{
+  background-color: rgb(106, 141, 102);
+  color: rgb(247, 247, 247);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.next-button a:hover, a:active{
+  background-color: rgb(67, 104, 63);
+  color: rgb(247, 247, 247);
+}
+
+/*----------------------------------*/
+/*payment info*/
+
+.s5-container {
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 480px;
+  float: right;
+}

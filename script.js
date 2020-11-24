@@ -19,7 +19,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-//slideer
+//slider
 
 var slideIndex = 1;
 showSlides(slideIndex);
