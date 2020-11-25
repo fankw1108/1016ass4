@@ -109,7 +109,7 @@ li a {
 /*donar detail*/
 
 .s3-container {
-  position: sticky;
+  position: relative;
   display: grid;
   grid-template-columns: 5% 45% 45% 5%;
   grid-template-rows: 380px;
@@ -237,12 +237,17 @@ li a {
   position: relative;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 63px;
+  grid-template-rows: 65px;
 }
 
 .next {
   grid-area: 1/ 1/ 2/ 2;
+}
+
+.next-button {
+  position: relative;
   float: right;
+  margin-top: 15px;
 }
 
 .next-button a:link, a:visited{
@@ -265,8 +270,36 @@ li a {
 /*payment info*/
 
 .s5-container {
+  position: relative;
   display: grid;
-  grid-template-columns: 30% auto;
-  grid-template-rows: 480px;
-  float: right;
+  grid-template-columns: 40% auto;
+  grid-template-rows: 450px;
+  column-gap: 15px
 }
+
+.payment-choose {
+  grid-area: 1/ 1/ 2/ 2;
+}
+
+.payment-choose button {
+  position: relative;
+  margin-top: 15px;
+  display: block;
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+/*.next-button a:link, a:visited{
+  background-color: rgb(106, 141, 102);
+  color: rgb(247, 247, 247);
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.next-button a:hover, a:active{
+  background-color: rgb(67, 104, 63);
+  color: rgb(247, 247, 247);
+}*/

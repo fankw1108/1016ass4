@@ -349,16 +349,28 @@
       </div>
     </div>
 
-    <div class="payment">
-      <div class="s5-container">
-        <div class="credt-info">
-          <button style="font-size:50px"><i class="credit fa fa-credit-card"></i></button>
-          <button style="font-size:50px"><i class="paypal fa fa-cc-paypal"></i></button>
+    <!--payment method and info-->
+    <div class="s5-container">
+        <div class="payment-choose">
+          <input type="radio" name="payment" id="card">
+          <label for="card">
+              <i class="fa fa-credit-card" aria-hidden="true"></i>
+              <span>Card</span>
+          </label>
+          <input type="radio" name="payment" id="cash">
+          <label for="cash">
+              <i class="fa fa-money" aria-hidden="true"></i>
+              <span>Cash</span>
+          </label>
+          <!--<button style="font-size:50px"><i class="credit fa fa-credit-card"></i></button>
+          <button style="font-size:50px"><i class="paypal fa fa-cc-paypal"></i></button>-->
         </div>
+
+          
+
         <div class="payment-info">
 
         </div>
-      </div>
     </div>
     <script src="script-donate.js"></script>
     
