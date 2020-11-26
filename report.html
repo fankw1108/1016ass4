@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style_report.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+
+  <body>
+    <div class="head">
+        <div class="logo">
+          <img src="logo.png" alt="logo">
+        </div>
+        <div class="navbar">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="#wwd">What we do</a></li>
+            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="donation-page.html#donate">Donate</a></li>
+            <li><a href="report.html#report">Report</a></li> 
+          </ul>
+        </div>
+        <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <div class="report_title">
+          <h1>Animal Cruelty/Injury Report Online</h1>
+        </div>
+    </div>
+
+    <div class="report_form">
+      <div class="wholeForm">
+        <div class="column">
+          <h2>Details of animal cruetly/injury</h2>
+          <form action="">
+            <label for="description">*Description of alleged cruelty:</label>
+            <textarea name="Description" style="width:80%; height:90px;"></textarea>
+            <br>
+            <label for="animalType">Type of animal:</label>
+            <br>
+            <select id="aniType" name="animalType">
+              <option>-None-</option>
+              <option value="bird">Bird</option>
+              <option value="cat">Cat</option>
+              <option value="dog">Dog</option>
+              <option value="fish">Fish</option>
+              <option value="goat">Goat</option>
+              <option value="horse">Horse</option>
+              <option value="pig">Pig</option>
+              <option value="rabbit">Rabbit</option>
+              <option value="reptile">Reptile</option>
+              <option value="sheep">Sheep</option>
+              <option value="wildlife">Wildlife</option>
+              <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="numberofanimal">Number of animal(s):</label>
+            <br>
+            <select id="aniType" name="animalType">
+              <option>-None-</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10+">10+</option>
+              <option value="20+">20+</option>
+              <option value="50+">50+</option>
+              <option value="not sure">Exact number not known</option>
+            </select>
+            <br>
+            <label for="size">Size of animal(s):</label>
+            <br>
+            <select id="anisize" name="animalsize">
+              <option>-None-</option>
+              <option value="mini">Miniature</option>
+              <option value="samll">Small</option>
+              <option value="medium">Medium</option>
+              <option value="giant">Giant</option>
+              <option value="large">Large</option>
+            </select>
+            <br>
+            <label for="condi">Condition of animal(s):</label>
+            <br>
+            <select id="aniCondi" name="animalcondition">
+              <option>-None-</option>
+              <option value="Emaciated">Emaciated</option>
+              <option value="Very thin">Very thin</option>
+              <option value="Thin">Thin</option>
+              <option value="Underweight">Underweight</option>
+              <option value="Ideal">Ideal</option>
+              <option value="Overweight">Overweight</option>
+              <option value="Heavy">Heavy</option>
+              <option value="Obese">Obese</option>
+              <option value="Grossly obese">Grossly obese</option>
+            </select>
+            <br>
+            <label for="colour">Colour of animal(s):</label>
+            <br>
+            <input type="text" id="colour" name="colour">
+            <br>
+            <label for="lsatseen">*Last seen animal(s):</label>
+            <br>
+            <input type="datetime-local" id="last_seen" name="last_seen">
+            <br>
+            <label for="allegate">*Did you personally witness this allegation?</label>
+            <br>
+            <input type="radio" id="Yes" name="y/n" value="yes" onclick="yesOrNo()">
+            <label for="yes">Yes</label>
+            <input type="radio" id="No" name="y/n" value="no" onclick="yesOrNo()">
+            <label for="no">No</label>
+            <br><p>Please note that the RSPCA cannot act on third party reports.</p>
+            <br>
+            <label for="ifno">If no, how did you become aware of the allegation?</label>
+            <textarea name="ifno" id="if_no" style="width:80%; height:90px;"></textarea>
+            <br>
+            <label for="loc">*Type of location:</label>
+            <br>
+            <select id="locType" name="typeoflocation">
+              <option>-Select a location-</option>
+              <option value="cp">Commercial Property</option>
+              <option value="residence">Residence</option>
+              <option value="vehicle">Vehicle</option>
+              <option value="other">Other</option>
+            </select>
+            <br>
+            <label for="suburb">Subrub/Town:</label>
+            <br>
+            <input type="text" id="subrub/town" name="subrub/town">
+            <br>
+            <label for="street">Street address of location:</label>
+            <br>
+            <input type="text" id="street" name="street">
+            <br>
+            <label for="state">*State:</label>
+            <br>
+            <select id="state1" name="state1">
+              <option value="states">-State-</option>
+              <option value="QLD">QLD</option>
+              <option value="NSW">NSW</option>
+              <option value="NT">NT</option>
+              <option value="SA">SA</option>
+              <option value="TAS">TAS</option>
+              <option value="VA">VA</option>
+              <option value="WA">WA</option>
+            </select>
+            <br>
+            <label for="img">Image:</label>
+            <br>
+            <input type="file" id="img" name="img" accept="image/*">
+            <br>
+            <input type="submit">
+          </form>
+          
+        </div>
+        <div class="column">
+          <h2>Animal owner/offender details</h2>
+          <form action="">
+            <input type="text" id="name_offender" name="name_offender" placeholder="*Name of animal owner/offender">
+            <br>
+            <input type="text" id="street_address" name="street_address" placeholder="*Street address">
+            <br>
+            <input type="text" id="subrub/town" name="subrub/town" placeholder="*Subrub/Town">
+            <br>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+            <input type="text" id="tel" name="tel" placeholder="Telephone/Mobile">
+          </form>
+          <h2>Your details</h2>
+          <form action="">
+            <input type="text" id="your_name" name="your_name" placeholder="*Your name">
+            <br>
+            <input type="text" id="street_address" name="street_address" placeholder="*Street address">
+            <br>
+            <input type="text" id="subrub/town" name="subrub/town" placeholder="*Subrub/Town">
+            <br>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode">
+            <input type="text" id="tel" name="tel" placeholder="*Telephone/Mobile">
+            <input type="text" id="email" name="email" placeholder="*Email@example.com">
+          </form>
+          <button id="submit">Sumbit</button>
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Thank you for your report. We will process your report as soon as possible. We may content with you if we need more information. Thank you.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+  <script src="script_report.js"></script>
+  </body>
+</html>

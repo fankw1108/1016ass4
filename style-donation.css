@@ -16,6 +16,7 @@ body {
   top: 0;
 }
 
+/*nav bar*/
 .s1-container {
   position: relative;
   display: grid;
@@ -182,7 +183,7 @@ li a {
   margin-top: 20px;
 }
 
-.sign-in-button a:link, a:visited{
+.sign_in_button a:link, a:visited{
   background-color: rgb(106, 141, 102);
   color: rgb(247, 247, 247);
   padding: 10px 20px;
@@ -193,7 +194,7 @@ li a {
   text-decoration: none;
 }
 
-.sign-in-button a:hover, a:active{
+.sign_in_button a:hover, a:active{
   background-color: rgb(67, 104, 63);
   color: rgb(247, 247, 247);
 }
@@ -244,13 +245,13 @@ li a {
   grid-area: 1/ 1/ 2/ 2;
 }
 
-.next-button {
+.next_button {
   position: relative;
   float: right;
   margin-top: 15px;
 }
 
-.next-button a:link, a:visited{
+.next_button a:link, a:visited{
   background-color: rgb(106, 141, 102);
   color: rgb(247, 247, 247);
   padding: 7px 20px;
@@ -261,7 +262,7 @@ li a {
   text-decoration: none;
 }
 
-.next-button a:hover, a:active{
+.next_button a:hover, a:active{
   background-color: rgb(67, 104, 63);
   color: rgb(247, 247, 247);
 }
@@ -298,7 +299,7 @@ input[type="radio"]{
 	width: 100px;
 	border: 2px solid #515f4f;
 	position: relative;
-	margin: auto;
+	
 	border-radius: 10px;
 	color: #515f4f;
 	transition: 0.5s;
@@ -330,23 +331,26 @@ input[type="radio"]:checked + label{
   grid-area: 2/ 2/ 3/ 3;
 }
 
-.link-to-paypal {
+
+
+
+#linktopaypal {
+  background-color: rgb(56, 97, 151);
+  color: white;
+  padding: 15px 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
   display: none;
 }
 
-.login_paypal {
-  background-color: rgb(56, 97, 151);
-  color: white;
-  padding: 12px 60px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  font-size: 20px;
+#linktopaypal:hover, linktopaypal:active {
+  opacity: 0.8;
 }
 
-.login_paypal:hover {
-  opacity: 0.8;
+#linktopaypal a {
+  text-decoration: none;
 }
 
 .s6-container {
@@ -381,3 +385,4 @@ input[type="radio"]:checked + label{
   background-color: rgb(67, 104, 63);
   color: rgb(247, 247, 247);
 }
+

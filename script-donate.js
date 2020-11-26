@@ -38,5 +38,4 @@ function cardOrPaypal() {
     c.style.display = "none";
     p.style.display = "block";
   }
-
 }
