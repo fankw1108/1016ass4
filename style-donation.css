@@ -1,3 +1,7 @@
+*{
+  font-family:Garamond;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,6 +55,7 @@ li a {
   text-align: center;
   padding: 0 15px;
   text-decoration: none;
+  font-family:League Gothic;
 }
 
 .search-container {
@@ -68,6 +73,7 @@ li a {
   margin-top: 8px;
   font-size: 17px;
   border: none;
+  
 }
 
 .search-container button {
@@ -92,6 +98,7 @@ li a {
   display: grid;
   grid-template-columns: auto 20% auto 20% auto 20% auto;
   grid-template-rows: 50px;
+  font-family:League Gothic;
 }
 
 .donar-detail-icon{
