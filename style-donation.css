@@ -56,6 +56,11 @@ li a {
   padding: 0 15px;
   text-decoration: none;
   font-family:League Gothic;
+  font-size: 25px;
+}
+
+li a:visited {
+  color: #516655;
 }
 
 .search-container {
@@ -97,7 +102,7 @@ li a {
   position: relative;
   display: grid;
   grid-template-columns: auto 20% auto 20% auto 20% auto;
-  grid-template-rows: 50px;
+  grid-template-rows: 90px;
   font-family:League Gothic;
 }
 
@@ -113,6 +118,15 @@ li a {
   grid-area: 1/ 6/ 2/ 7
 }
 
+.step_label {
+  border-color: #516655;
+  background-color: #516655;
+  color: ghostwhite;
+  text-align: center;
+  padding: 10px 25px;
+  margin-top: 25px;
+}
+
 /*----------------------------------*/
 /*donar detail*/
 
@@ -120,7 +134,7 @@ li a {
   position: relative;
   display: grid;
   grid-template-columns: 5% 45% 45% 5%;
-  grid-template-rows: 380px;
+  grid-template-rows: 430px;
 }
 
 /*donate amount*/
@@ -212,7 +226,7 @@ li a {
   margin-top: 20px;
 }
 
-.fill-in input[type=text] {
+.short_input input[type=text] {
   width: 39%;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -281,7 +295,7 @@ li a {
   position: relative;
   display: grid;
   grid-template-columns: 40% auto;
-  grid-template-rows: 30px 380px;
+  grid-template-rows: 30px 450px;
   column-gap: 15px;
 }
 
@@ -336,20 +350,24 @@ input[type="radio"]:checked + label{
 /*card info*/
 .payment-info {
   grid-area: 2/ 2/ 3/ 3;
+  background-color: rgba(235, 226, 185, 0.363);
+  border-radius: 15px;
 }
 
-
-
+/*paypal*/
 
 #linktopaypal {
   background-color: rgb(56, 97, 151);
   color: white;
-  padding: 15px 50px;
+  padding: 15px 30px;
   text-align: center;
   display: inline-block;
   cursor: pointer;
   font-size: 20px;
   display: none;
+  width: 50%;
+  margin: auto;
+  margin-top: 30%;
 }
 
 #linktopaypal:hover, linktopaypal:active {
@@ -359,6 +377,29 @@ input[type="radio"]:checked + label{
 #linktopaypal a {
   text-decoration: none;
 }
+
+.short_input label {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 30px;
+}
+
+.card_detail input[type=text] {
+  width: 39%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 10px;
+  background-color: rgba(255, 255, 255, 0.753);
+  padding: 3px 5px 3px 5px;
+  margin: 4px 30px;
+}
+
+
+
+/*----------------------------------*/
+/*pay button*/
+
 
 .s6-container {
   position: relative;
