@@ -1,3 +1,4 @@
+
 function yesOrNo() {
   var x = document.getElementById("Yes");
   var y = document.getElementById("No");

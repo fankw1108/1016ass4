@@ -49,10 +49,6 @@ body, html {
   padding: 15px;
 }
 
-.nav {
-  width: 2000px;
-}
-
 ul {
   list-style-type: none;
   display: block;
@@ -71,8 +67,7 @@ li a {
   font-size: 25px
 }
 
-li a:visited, a:hover, a:active {
-  color: inherit;
+li a:visited {
   color: #516655;
 }
 
@@ -81,10 +76,53 @@ li a:hover, a:active {
   color: white;
 }
 
+/*mobile version navbar*/
+.dropdown {
+  display: none;
+}
+
+.dropbtn {
+  background-color: rgb(69, 110, 70);
+  color: white;
+  padding: 5px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:visited {color: black}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgba(102, 133, 102);
+}
+
+/*search*/
 .home .search-container {
   display: flex;
   margin-left: auto;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .home input[type=text] {
@@ -95,10 +133,7 @@ li a:hover, a:active {
 }
 
 .home .search-container button {
-  float: right;
   padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
   background: #ddd;
   font-size: 17px;
   border: none;
@@ -117,31 +152,38 @@ li a:hover, a:active {
   top: 50%;
   text-align: center;
   font-size: 50px;
-  background-color: rgba(26, 6, 50, 0.5);
+  background-color: rgb(175, 169, 136, 0.6);
   color: white;
 }
 
 .report {
-  position: absolute;
+  position: fixed;
   margin: 0;
-  top: 85%;
-  left: 3%
+  top: 70%;
+  left: 3%;
+  z-index: 9999;
 }
 
 .report-button {
   border: 4px solid rgb(67, 104, 63);
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(67, 104, 63);
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 20px;
 }
 
+.report-button:hover {
+  background-color: rgb(67, 104, 63);
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .media-button {
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 85%;
+  top: 80%;
+  z-index: 9999;
 }
 
 .media {
@@ -228,12 +270,13 @@ li a:hover, a:active {
 .text {
   color: #d4b31e;
   font-size: 25px;
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   top: 10%;
   left: 10%;
   width: 75%;
   text-align: center;
+  background-color: rgba(85, 112, 86, 0.692)
 }
 
 .numbertext {
@@ -286,11 +329,6 @@ li a:hover, a:active {
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
 /*--------------------------------------*/
 /*picture menu*/
 
@@ -307,32 +345,25 @@ li a:hover, a:active {
 
 .pic-menu p {
   position: absolute;
-  bottom: 50px;
-  left: 40%;
-  font-size: 30px;
+  top: 40%;
+  left: 45%;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
 }
 
 .shop {
   position: relative;
-  text-align: center;
-  color: white;
-}
-
-.what {
-  position: relative;
-  text-align: center;
   color: white;
 }
 
 .donation {
   position: relative;
-  text-align: center;
   color: white;
 }
 
 .adoption {
   position: relative;
-  text-align: center;
   color: white;
 }
 
@@ -388,6 +419,7 @@ li a:hover, a:active {
   border-radius: 20px;
   text-align: center;
   text-decoration: none;
+  margin: 0;
 }
 
 .s3-button a:hover, a:active{
@@ -404,7 +436,7 @@ li a:hover, a:active {
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   grid-template-rows: 77.5px 77.5px 77.5px 77.5px 77.5px 77.5px;
   grid-gap: 7px;
-  padding: 30px 30px;
+  padding: 7px 0 7px 7px;
 }
 
 .s4-container > div {
@@ -474,12 +506,12 @@ li a:hover, a:active {
 .s4-text {
   position: absolute;
   top:20%;
-  padding: 30px
 }
 
 .s4-content {
   font-size: 25px;
-  padding: 100px;
+  padding: 15px;
+  margin: 0 150px;
   background-color: #cececeb6;
   text-align: center;
 }
@@ -505,5 +537,108 @@ li a:hover, a:active {
   color: rgb(247, 247, 247);
 }
 
-@media only screen and (max-device-width: 700px) {
+@media screen and (max-width:670px) {
+
+  .search-container input[type=text] {
+    width: 50%;
+    font-size: 10px;
+  }
+
+  .home .search-container button {
+    background: #ddd;
+    font-size: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 150px;
+    padding-top: 10px;
+    padding-left: 7px;
+  }
+
+  .navbar ul{
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .report {
+    top: 83%;
+  }
+
+  .report-button {
+    font-size: 15px;
+  }
+
+  .media-button {
+    top: 85%;
+  }
+  /*slideshow*/
+
+  .text {
+    font-size: 15px;
+    top: 3%;
+    padding: 5px;
+  }
+
+  .numbertext {
+    font-size: 15px;
+  }
+
+  /*relocate the support us page*/
+  .s3-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 60% 10% 20% 10%;
+  }
+
+  .s3-img {
+    grid-area: 1 / 1 / 2/ 2;
+  }
+
+  .s3-title {
+    grid-area: 2/ 1/ 3/ 1;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+  }
+
+  .s3-content {
+    grid-area: 3/ 1/ 4/ 1;
+    text-align: center;
+    margin-top: 0;
+    color: #717171;
+    padding-top: 15px;
+  }
+
+  .s3-button {
+    grid-area: 4/ 1/ 5/ 1;
+    margin: 0;
+  }
+
+  /*mobile version donation*/
+
+  .s4-container {
+    padding: 7px 0px 7px 7px;
+  }
+
+  .s4-content {
+    font-size: 20px;
+    padding: 50px 0;
+    margin: 0 20px
+  }
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
 }

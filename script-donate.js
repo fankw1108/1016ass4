@@ -7,6 +7,10 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
+function checkOtherAmount() {
+  document.getElementById('amount_other').checked = true;
+}
+
 function enableInput() {
   var checkBox = document.getElementById("same_address");
   if (checkBox.checked == true) {

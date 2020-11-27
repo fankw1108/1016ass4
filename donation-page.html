@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>repl.it</title>
-    <link href="style-donation.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  
-  <body>
-    <!--nav bar, logo, search-->
-    <div class="stick">
-      <div class="s1-container">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>repl.it</title>
+	<link href="style-donation.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!--nav bar, logo, search-->
+	<div class="stick">
+		<div class="s1-container">
+        <!--nav bar, logo, search-->
         <div class="logo">
           <img src="logo.png" alt="logo">
         </div>
-        <div class="navbar">
+        <div class="navbar" id="topnav">
           <ul>
             <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#what_we_do">What we do</a></li>
             <li><a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a></li>
             <li><a href="donation-page.html#donate">Donate</a></li>
             <li><a href="report.html#report">Report</a></li> 
           </ul>
+
+          <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html#home">Home</a>
+              <a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a>
+              <a href="donation-page.html#donate">Donate</a>
+              <a href="report.html#report">Report</a>
+            </div>
+          </div>
         </div>
         <div class="search-container">
           <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
       </div>
-
       <div class="s2-container">
         <div class="donar-detail-icon">
           <div class="step_label">1. Donar Detail</div>
@@ -48,18 +58,37 @@
 
     <div class="s3-container">
       <!--choosing donation-->
-      <div class="donate-amount">
-        <div class="slidebar">
-          <input type="range" min="1" max="1000" value="50" class="slider" id="myRange">
-          <p>$<span id="demo"></span></p>
+        <div class="donate_amount">
+            <input type="radio" name="price" id="amount25" onclick="">
+            <label for="amount25" id="amo25">
+              <span>$25</span>
+            </label>
+
+            <input type="radio" name="price" id="amount50" onclick="">
+            <label for="amount50" id="amo50">
+              <span>$50</span>
+            </label>
+
+            <input type="radio" name="price" id="amount100" onclick="">
+            <label for="amount100" id="amo100">
+              <span>$100</span>
+            </label>
+
+            <input type="radio" name="price" id="amount200" onclick="">
+            <label for="amount200" id="amo200">
+              <span>$200</span>
+            </label>
+
+          <div class="slidebar">
+            <input type="radio" name="price" id="amount_other" onclick=""/>
+              <label for="amount_other" id="amo_other">
+                <p>Other ($)</p>
+                  <input type="text" id="other_value" name="price" onclick="checkOtherAmount()"></input>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+              </label>
+            </span>
+          </div>
         </div>
-        <div class="price">
-          <span class="dot1">$25</span>
-          <span class="dot2">$50</span>
-          <span class="dot3">$100</span>
-          <span class="dot4">$200</span>
-        </div>
-      </div>
+
       <div class="info">
         <div class="sign-in">
           <div class="sign_in_button"><a href="" target="_blank">Sign in</a></div>
@@ -67,7 +96,7 @@
         <div class="fill-in">
           <p id="or">Or</p>
           <!--information form-->
-          <form>
+          <form class="short_input">
             <input type="text" id="fname" name="fname" placeholder="First Name">
             <input type="text" id="lname" name="lname" placeholder="Last Name">
           </form>
@@ -352,12 +381,12 @@
           <div class="payment-choose">
             <input type="radio" name="payment" id="card" onclick="cardOrPaypal()" checked>
             <label for="card" >
-              <i class="payment-select fa fa-credit-card" aria-hidden="true"></i>
+              <i class="fa fa-credit-card" aria-hidden="true"></i>
               <span>Credit Card</span>
             </label>
             <input type="radio" name="payment" id="paypal" onclick="cardOrPaypal()">
             <label for="paypal" >
-                <button><i class="payment-select fa fa-cc-paypal" aria-hidden="true"></i></button>
+                <i class="fa fa-cc-paypal" aria-hidden="true"></i>
                 <span>Paypal</span>
             </label>
           </div>
@@ -377,54 +406,56 @@
                     <i class="fa fa-cc-discover" style="color:orange;"></i>
                   </div>
                   <label for="expmonth">Expiry</label>
-                  <br>
-                  <select id="month" name="month">
-                    <option>-Month-</option>
-                    <option value="January">January</option>
-                    <option value="Febuary">Febuary</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                  </select>
-                  <select name="year" id="year">
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                    <option value="2031">2031</option>
-                    <option value="2032">2032</option>
-                    <option value="2033">2033</option>
-                    <option value="2034">2034</option>
-                    <option value="2035">2035</option>
-                    <option value="2036">2036</option>
-                    <option value="2037">2037</option>
-                    <option value="2038">2038</option>
-                    <option value="2039">2039</option>
-                    <option value="2040">2040</option>
-                    <option value="2041">2041</option>
-                    <option value="2042">2042</option>
-                    <option value="2043">2043</option>
-                    <option value="2044">2044</option>
-                    <option value="2045">2045</option>
-                    <option value="2046">2046</option>
-                    <option value="2047">2047</option>
-                    <option value="2048">2048</option>
-                    <option value="2049">2049</option>
-                  </select>
+                  <div class="expiry">
+                    <select id="month" name="expiry_date">
+                      <option>-Month-</option>
+                      <option value="January">January</option>
+                      <option value="Febuary">Febuary</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                    </select>
+                    <select name="expiry_date" id="year">
+                      <option value="2020">2020</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                      <option value="2030">2030</option>
+                      <option value="2031">2031</option>
+                      <option value="2032">2032</option>
+                      <option value="2033">2033</option>
+                      <option value="2034">2034</option>
+                      <option value="2035">2035</option>
+                      <option value="2036">2036</option>
+                      <option value="2037">2037</option>
+                      <option value="2038">2038</option>
+                      <option value="2039">2039</option>
+                      <option value="2040">2040</option>
+                      <option value="2041">2041</option>
+                      <option value="2042">2042</option>
+                      <option value="2043">2043</option>
+                      <option value="2044">2044</option>
+                      <option value="2045">2045</option>
+                      <option value="2046">2046</option>
+                      <option value="2047">2047</option>
+                      <option value="2048">2048</option>
+                      <option value="2049">2049</option>
+                    </select>
+                  </div>
+                  
                   <br>
                   <label for="cvv">CVV</label>
                   <input type="text" id="cvv" name="cvv" placeholder="cvv">

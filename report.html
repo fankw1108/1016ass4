@@ -14,14 +14,23 @@
         <div class="logo">
           <img src="logo.png" alt="logo">
         </div>
-        <div class="navbar">
+        <div class="navbar" id="topnav">
           <ul>
             <li><a href="index.html#home">Home</a></li>
-            <li><a href="#wwd">What we do</a></li>
-            <li><a href="#adopt">Adopt</a></li>
+            <li><a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a></li>
             <li><a href="donation-page.html#donate">Donate</a></li>
             <li><a href="report.html#report">Report</a></li> 
           </ul>
+
+          <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html#home">Home</a>
+              <a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a>
+              <a href="donation-page.html#donate">Donate</a>
+              <a href="report.html#report">Report</a>
+            </div>
+          </div>
         </div>
         <div class="search-container">
           <form action="/action_page.php">
@@ -29,18 +38,17 @@
             <button type="submit"><i class="fa fa-search"></i></button>
           </form>
         </div>
-        <div class="report_title">
-          <h1>Animal Cruelty/Injury Report Online</h1>
-        </div>
     </div>
-
+    <div class="report_title">
+      <h1>Animal Cruelty/Injury Report Online</h1>
+    </div>
     <div class="report_form">
       <div class="wholeForm">
         <div class="column">
           <h2>Details of animal cruetly/injury</h2>
           <form action="">
             <label for="description">*Description of alleged cruelty:</label>
-            <textarea name="Description" style="width:80%; height:90px;"></textarea>
+            <textarea name="Description" style="width:90%; height:90px;"></textarea>
             <br>
             <label for="animalType">Type of animal:</label>
             <br>
@@ -122,7 +130,7 @@
             <br><p>Please note that the RSPCA cannot act on third party reports.</p>
             <br>
             <label for="ifno">If no, how did you become aware of the allegation?</label>
-            <textarea name="ifno" id="if_no" style="width:80%; height:90px;"></textarea>
+            <textarea name="ifno" id="if_no" style="width:90%; height:90px;"></textarea>
             <br>
             <label for="loc">*Type of location:</label>
             <br>
@@ -165,7 +173,7 @@
         </div>
         <div class="column">
           <h2>Animal owner/offender details</h2>
-          <form action="">
+          <form action="" class="information">
             <input type="text" id="name_offender" name="name_offender" placeholder="*Name of animal owner/offender">
             <br>
             <input type="text" id="street_address" name="street_address" placeholder="*Street address">
@@ -176,7 +184,7 @@
             <input type="text" id="tel" name="tel" placeholder="Telephone/Mobile">
           </form>
           <h2>Your details</h2>
-          <form action="">
+          <form action="" class="information">
             <input type="text" id="your_name" name="your_name" placeholder="*Your name">
             <br>
             <input type="text" id="street_address" name="street_address" placeholder="*Street address">
@@ -187,7 +195,9 @@
             <input type="text" id="tel" name="tel" placeholder="*Telephone/Mobile">
             <input type="text" id="email" name="email" placeholder="*Email@example.com">
           </form>
-          <button id="submit">Sumbit</button>
+          <div class="submit_button">
+            <button id="submit">Sumbit</button>
+          </div>
           <!-- The Modal -->
           <div id="myModal" class="modal">
             <div class="modal-content">

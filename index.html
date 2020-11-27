@@ -17,13 +17,24 @@
         <div class="logo">
           <img src="logo.png" alt="logo">
         </div>
-        <ul>
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="#what_we_do">What we do</a></li>
-          <li><a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a></li>
-          <li><a href="report.html#report">Report</a></li> 
-          <li><a href="donation-page.html#donate">Donate</a></li>
-        </ul>
+        <div class="navbar" id="topnav">
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a></li>
+            <li><a href="donation-page.html#donate">Donate</a></li>
+            <li><a href="report.html#report">Report</a></li> 
+          </ul>
+
+          <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+              <a href="index.html#home">Home</a>
+              <a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Adopt</a>
+              <a href="donation-page.html#donate">Donate</a>
+              <a href="report.html#report">Report</a>
+            </div>
+          </div>
+        </div>
         <div class="search-container">
           <form action="/action_page.php">
             <input type="text" placeholder="Search.." name="search">
@@ -35,12 +46,12 @@
         Will you be our guardian angel?
       </div>
       
-      <div class="report"><button class="report-button">Report Animal <br> Cruelty/Injury</button></div>
+      <div class="report"><button class="report-button">Report Animal <br> Cruelty/Injury <br> Or <br> Contact Us:<br>(02) 9770 7555</button></div>
       
       <div class="media-button">
-        <a href="#" class="media fa fa-facebook"></a>
-        <a href="#" class="media fa fa-twitter"></a>
-        <a href="#" class="media fa fa-instagram"></a>
+        <a href="https://www.facebook.com/RSPCANewSouthWales/" target="_blank" class="media fa fa-facebook"></a>
+        <a href="https://twitter.com/RSPCA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" class="media fa fa-twitter"></a>
+        <a href="https://www.instagram.com/rspcansw/?hl=en" target="_blank" class="media fa fa-instagram"></a>
       </div>
 
     </div>
@@ -95,23 +106,18 @@
     </div>
 
     <!--section 3 of the home page - picture menu-->
-
     <div class="pic-menu">
-      <div class="what">
-        <a href=""><img src="menu-img/wwd.jpg" alt="what we do"></a>
-        <p class="pic-title">What We Did</p>
-      </div>
       <div class="donation">
-        <a href=""><img src="menu-img/donation.jpg" alt="donate please"></a>
+        <a href="donation-page.html"><img src="menu-img/donation.jpg" alt="donate please"></a>
         <p class="pic-title">Donation</p>
       </div>
       <div class="adoption">
-        <a href=""><img src="menu-img/adoption.jpg" alt="adopt a pet"></a>
+        <a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank"><img src="menu-img/adoption.jpg" alt="adopt a pet"></a>
         <p class="pic-title">Adopt A Pet</p>
       </div>
       
       <div class="shop">
-        <a href=""><img src="menu-img/shop.jpg" alt="Shop with us"></a>
+        <a href="https://www.worldforpets.com.au/" target="_blank"><img src="menu-img/shop.jpg" alt="Shop with us"></a>
         <p class="pic-title">Shop With Us</p>
       </div>
       
@@ -123,7 +129,7 @@
         <div class="s3-img"><img src="support.jpg" alt="Please upporrt us!"></div>
         <div class="s3-title">Support Us!</div>
         <div class="s3-content">Support the RSPCA and help animals across Australia. Your donation will go directly to supporting the work of your local RSPCA shelter. Make a difference in under 5 minutes.</div>
-        <div class="s3-button"><a href="" target="_blank">Donate Today</a></div>
+        <div class="s3-button"><a href="donation-page.html#donate">Donate Today</a></div>
       </div>
     </div>
 
@@ -146,7 +152,7 @@
         <div class="s4-text">
           <div class="s4-content">Adopting a new pet is a big commitment and something you should think carefully about – so as impatient as you might feel, hopefully a few month’s wait is something you’re prepared to handle.
           </div>
-          <div class="s4-button"><a href="" target="_blank">Search For A Pet!</a></div>
+          <div class="s4-button"><a href="https://www.adoptapet.com.au/search?state=8&animalType=#adopt" target="_blank">Search For A Pet!</a></div>
         </div>
       </div>
     </div>
